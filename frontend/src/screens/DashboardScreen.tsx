@@ -136,7 +136,13 @@ export function DashboardScreen({ onOpenProfile, onOpenMealPlan }: Props) {
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: theme.colors.background },
   flex: { flex: 1 },
-  content: { padding: theme.spacing(2), gap: theme.spacing(1.5) },
+  content: {
+    padding: theme.spacing(2),
+    gap: theme.spacing(1.5),
+    width: '100%',
+    maxWidth: theme.maxContentWidth,
+    alignSelf: 'center',
+  },
   header: { gap: theme.spacing(2) },
   topRow: {
     flexDirection: 'row',

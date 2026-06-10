@@ -35,19 +35,28 @@ teste tecsa/
 
 ## Como executar (resumo)
 
-**1. Backend** (na pasta `backend/`):
+### Opção 1 — Tudo com um comando (Docker, na raiz)
+Sobe a API e o app na versão web:
 ```bash
-cp laravel-app/.env.example laravel-app/.env   # e defina OPENAI_API_KEY
-docker compose up -d --build                   # API em http://localhost:9000
+# defina a chave da OpenAI em backend/laravel-app/.env (OPENAI_API_KEY=...)
+docker compose up -d --build
 ```
+- API: **http://localhost:9000**
+- App (web): **http://localhost:8081**
+- Documentação da API: **http://localhost:9000/docs/api**
 
-**2. Frontend** (na pasta `frontend/`):
+### Opção 2 — App no celular/emulador (fluxo mobile)
+Para rodar no Expo Go / emulador
+Android, use o Metro no host (o backend pode continuar no Docker):
 ```bash
+cd frontend
 npm install
-npm start        # pressione "a" (Android), "i" (iOS) ou "w" (web)
+npm start        # pressione "a" (Android) ou escaneie o QR no Expo Go
 ```
 
-> Instruções completas (URL da API por plataforma, emulador, testes) nos READMEs de cada módulo.
+
+> Também existe um `docker-compose.yml` dentro de `backend/` para subir apenas o
+> backend. Use um ou o outro (ambos publicam a porta 9000).
 
 ---
 

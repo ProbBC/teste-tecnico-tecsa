@@ -145,7 +145,14 @@ function Field({ label, error, ...inputProps }: FieldProps) {
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: theme.colors.background },
   flex: { flex: 1 },
-  content: { padding: theme.spacing(2), paddingBottom: theme.spacing(8), gap: theme.spacing(2) },
+  content: {
+    padding: theme.spacing(2),
+    paddingBottom: theme.spacing(8),
+    gap: theme.spacing(2),
+    width: '100%',
+    maxWidth: theme.maxContentWidth,
+    alignSelf: 'center',
+  },
   topRow: { flexDirection: 'row', alignItems: 'center', gap: theme.spacing(1.5) },
   back: { paddingVertical: 4, paddingRight: 4 },
   backText: { color: theme.colors.primary, fontSize: 16, fontWeight: '700' },

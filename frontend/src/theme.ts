@@ -12,4 +12,5 @@ export const theme = {
   },
   spacing: (n: number) => n * 8,
   radius: 16,
+  maxContentWidth: 520,
 } as const;
